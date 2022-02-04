@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inscribirpaciente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+
+  <form [formGroup]="addEncuestapacienteForm" (submit)="addEncuestaPaciente()">
+    <ion-item>
+     <ion-label stacked>Nombre Usuario:</ion-label>
+     <ion-input formControlName="username"  type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Contraseña:</ion-label>
+      <ion-input formControlName="password"  type="text"></ion-input>
+     </ion-item>
+     <ion-button expand="block" type="submit" [disable]="">Agregar</ion-button>
+  </form>
+
+</ion-content>

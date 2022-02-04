@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons>
+
+      <ion-button routerLink="/home" routerDirection="back">
+      </ion-button>
+      <ion-title>Crear Paciente</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding [fullscreen]="true">
+  <form [formGroup]="createUsersForm" (submit)="createUsers()">
+    <ion-item>
+     <ion-label stacked>Nombre:</ion-label>
+     <ion-input formControlName="usersName" type="text" aria-placeholder="Ingrese El Nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Apellido:</ion-label>
+      <ion-input formControlName="secondName" type="text" aria-placeholder="Ingrese El apellido"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Edad</ion-label>
+      <ion-input formControlName="ageUsers" type="text" aria-placeholder="Ingrese La Edad"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Telefono</ion-label>
+      <ion-input formControlName="phoneUsers" type="text" aria-placeholder="Ingrese Telefono"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Direccion</ion-label>
+      <ion-input formControlName="directionUsers" type="text" aria-placeholder="Ingrese Telefono"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Estado Civil</ion-label>
+      <ion-input formControlName="statusUsers" type="text" aria-placeholder="Ingrese Estado Civil"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Profesion</ion-label>
+      <ion-input formControlName="profeUsers" type="text" aria-placeholder="Ingrese Profesion"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Estrato</ion-label>
+      <ion-input formControlName="estractoUsers" type="text" aria-placeholder="Ingrese Estrato"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Cargo</ion-label>
+      <ion-input formControlName="cargoUsers" type="text" aria-placeholder="Ingrese Cargo"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Horas Trabajadas Por Dia</ion-label>
+      <ion-input formControlName="horasTrabajadas" type="text" aria-placeholder="Ingrese La Hora Trabajadas"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Cantidad Alimentos Por Dias</ion-label>
+      <ion-input formControlName="cantidadAlimento" type="text" aria-placeholder="Ingrese La Cantidad De Alimento"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Ultimo Nivel De Estudio</ion-label>
+      <ion-input formControlName="nivelEstudio" type="text" aria-placeholder="Ingrese El Nivel De Estudio"></ion-input>
+     </ion-item>
+
+     <ion-button expand="block" type="submit" [disable]="">Agregar Usuario</ion-button>
+
+  </form>
+
+</ion-content>

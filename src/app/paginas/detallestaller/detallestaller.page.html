@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons >
+      <ion-button routerLink="/home" routerDirection="back" class="return">
+      </ion-button>
+      <ion-title>Detalles Del Taller</ion-title>
+      <ion-button routerLink="/create-taller">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+      <div class="titleTaller">
+        <h3>{{(taller | async)?.tallerName}}</h3>
+      </div>
+      <div class="contentTaller">
+        <p>Este Taller Fue diseñado para las personas que no se encuentran bien de salud mental</p>
+      </div>
+      <div class="hours">
+        <p>Empieza A Las: {{(taller | async)?.horaTaller}}</p>
+      </div>
+      <div class="present">
+        <p>Presentado Por: {{(taller | async)?.expertoTaller}}</p>
+      </div>
+      <div class="price">
+        <p>Valor Para Ingresar: ${{(taller | async)?.precioTaller}} Dolares</p>
+      </div>
+      <ion-button expand="block" type="submit" routerLink="/inscribirpaciente/{{(taller | async)?.tallerName}}">Inscribirse</ion-button>
+
+     <div class="timetable">
+       <strong>Horario De Atencion: <p>7:00AM A 5:00PM</p></strong>
+     </div>
+  </ion-content>

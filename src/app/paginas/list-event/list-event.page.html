@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eventos Proximos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-list-header><ion-label>Tus Proximos Eventos</ion-label></ion-list-header>
+    <ion-item tappable *ngFor="let event of eventList || async" routerLink="/eventdetail/{{event.id}}">
+      <ion-label><h2>{{event?.name}}</h2>
+      <p>Ticket:<strong> {{event?.price}}</strong></p>
+      <p>Date:<strong> {{event?.date}}</strong></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

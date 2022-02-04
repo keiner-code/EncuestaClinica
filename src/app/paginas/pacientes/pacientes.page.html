@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons>
+      <ion-button routerLink="/home" routerDirection="back">
+      </ion-button>
+      <ion-title>Pacientes</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <h5>Pacientes Inscrito En Los Talleres</h5>
+  <ion-card *ngFor = "let paciente of datosTallerpaciente | async">
+  <div class="dateTaller">
+    <p>Titulo: {{paciente.taller}}</p>
+    <p>Nombre: {{paciente.username}}</p>
+  </div>
+</ion-card>
+<ion-button expand="block" routerLink="/pacientescriticos">Pacientes Criticos</ion-button>
+</ion-content>

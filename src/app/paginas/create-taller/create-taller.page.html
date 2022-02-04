@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button routerLink="/home" routerDirection="back" class="return">
+      </ion-button>
+      <ion-title>Crear Taller</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="createTallerForm" (submit)="createTaller()">
+    <ion-item>
+     <ion-label stacked>Nombre </ion-label>
+     <ion-input formControlName="tallerName" type="text" aria-placeholder="Como Se Llama El Taller"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stached>Hora</ion-label>
+      <ion-input formControlName="horaTaller" type="text" aria-placeholder="Que Hora Es"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Experto En La Tematica</ion-label>
+      <ion-input formControlName="expertoTaller" type="text" aria-placeholder="Nombre Del Experto"></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Precio</ion-label>
+      <ion-input formControlName="precioTaller" type="text" aria-placeholder="Precio Del Taller"></ion-input>
+     </ion-item>
+
+     <ion-button expand="block" type="submit" [disable]="">Agregar Taller</ion-button>
+
+  </form>
+</ion-content>

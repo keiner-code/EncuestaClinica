@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons>
+      <ion-button routerLink="/home" routerDirection="back">
+      </ion-button>
+      <ion-title>Pacientes Criticos</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h5>Pacientes Criticos</h5>
+  <ion-card *ngFor = "let paciente of pacientesCriticos | async">
+  <div class="dateTaller" *ngIf = "paciente.status === 'Estres Grave'">
+    <p>Estado: {{paciente.status}}</p>
+    <p>Nombre: {{paciente.username}}</p>
+  </div>
+</ion-card>
+</ion-content>

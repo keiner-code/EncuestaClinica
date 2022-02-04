@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button routerLink="/home" routerDirection="back">
+      </ion-button>
+      <ion-title>Pacientes</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<h5>Pacientes A Realizar La Prueba</h5>
+<ion-itme *ngFor = "let dato of (results |async)">
+  <p>{{dato.name}}</p>
+</ion-itme>
+
+<ion-content>
+
+</ion-content>

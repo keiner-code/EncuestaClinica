@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons defaultHref="/list-event"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title>{{currentEvent?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      Informacion del evento
+      <span [class.rentable]="currentEvent?.revenue>0" [class.no-rentable]="currentEvent?.revenue<0">{{currentEvent?.revenue | currency}}</span>
+    </ion-card-header>
+
+      <ion-card-content>
+        <p>Ticket: <strong>{{currentEvent?.price}}</strong></p>
+        <p>Fecha: <strong>{{currentEvent?.date}}</strong></p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class=".agregar_invitado_formulario">
+      <ion-card-header>
+        <h3>Agregar Invitado</h3>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Nombre: </ion-label>
+          <ion-input [(ngModel)]="nombre_invitado" type="text" aria-placeholder="Cual Es El Nombre Del Invitado"></ion-input>
+        </ion-item>
+        <ion-button color="primary" (click)="agregarInvitado(nombre_invitado)" [disable]='!nombre_invitado'>Agregar Invitado</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <p>Ticket: <strong>{{currentEvent?.price}}</strong></p>
+        <p>Fecha: <strong>{{currentEvent?.date}}</strong></p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

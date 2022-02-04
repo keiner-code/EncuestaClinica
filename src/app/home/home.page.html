@@ -1,20 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons>
+      <ion-title>
+        JANSEN
+      </ion-title>
+      <ion-button routerLink="/create">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <p class="contentp">Clinica De Estres</p>
+    <h5>Conoce Nuestros Talleres </h5>
+    <ion-card *ngFor = "let taller of datosTaller | async" routerLink="/detallestaller/{{taller.id}}">
+      <ion-card-header>
+        <p>{{taller.tallerName}}</p>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="cartItem">
+          <div class="cartexpert">
+            <p>Autor: {{taller.expertoTaller}}</p>
+            <p>Hora: {{taller.horaTaller}}</p>
+          </div>
+          <div class="priceItem">
+            <p>$ {{taller.precioTaller}}</p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-button routerLink="/encuesta" class="btnEncuesta">Realizar Encuesta</ion-button>
+    <ion-button routerLink="/pacientes" class="btnEncuesta">Pacientes Inscritos</ion-button>
+    <ion-button routerLink="/create-event" class="btncreateEvent">Crear Un Evento</ion-button>
+    <ion-button routerLink="/pacientesrealizarprueba" class="btnEncuestaprueba">Pacientes A Realizar La Prueba</ion-button>
 </ion-content>
